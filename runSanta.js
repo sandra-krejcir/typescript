@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var bag_1 = require("./bag");
+var bagType_1 = require("./bagType");
+var present_1 = require("./present");
+var presentType_1 = require("./presentType");
+var santa_1 = require("./santa");
+var sled_1 = require("./sled");
+var santa = new santa_1.Santa("Klaus", 45);
+var sled = new sled_1.Sled(santa);
+var bag = new bag_1.Bag(10, bagType_1.BagType.Canvas);
+var present1 = new present_1.Present("Doll", 8, presentType_1.PresentType.Hard);
+var present2 = new present_1.Present("Card", 3, presentType_1.PresentType.Soft);
+bag.addPresents(present1);
+bag.addPresents(present2);
+sled.addBag(bag);
